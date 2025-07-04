@@ -34,7 +34,6 @@ if uploaded_confirmed and uploaded_deaths and uploaded_recovered:
 
     # 데이터 병합
     df_merged = df_confirmed.merge(df_deaths, on='날짜').merge(df_recovered, on='날짜')
-    df_merged
 
     # '날짜'컬럼에서 시간을 제거
     df_merged['날짜'] = df_merged['날짜'].dt.date
